@@ -18,9 +18,4 @@ spec:
         image: zxcvbnius/docker-demo:latest
         ports:
         - containerPort: 3000
-      - name: my-alpine
-        image: alpine:latest
-        command: ["/bin/sh","-c","sleep 60m"]
-        ports:
-        - containerPort: 22
 
