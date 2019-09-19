@@ -11,3 +11,7 @@ spec:
     imagePullPolicy: IfNotPresent
     command: ["top","-b"]
   dnsPolicy: "ClusterFirst"
+  dnsConfig:
+    nameservers:
+      - 8.8.8.8
+    searches:
