@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-centos
+  labels:
+    app: centos
+spec:
+  containers:
+  - name: my-centos
+    image: centos:latest
+    imagePullPolicy: IfNotPresent
+    command: ["top","-b"]
