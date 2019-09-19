@@ -10,3 +10,4 @@ spec:
     image: centos:latest
     imagePullPolicy: IfNotPresent
     command: ["top","-b"]
+  dnsPolicy: "ClusterFirst"
