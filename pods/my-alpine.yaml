@@ -13,8 +13,8 @@ spec:
     imagePullPolicy: IfNotPresent
     name: alpine
   restartPolicy: Always
-  dnsPolicy: "ClusterFirst"
-  dnsConfig:
-    nameservers:
-      - 8.8.8.8
-    searches:
+#  dnsPolicy: "ClusterFirst"
+#  dnsConfig:
+#    nameservers:
+#      - 8.8.8.8
+#    searches:
