@@ -1,3 +1,9 @@
+# setup load balancer type service
+# cloud will assign a load balancer which will redirect traffic 
+# for the port:3000 to the specific port assigned by k8s cluster
+# and the specific port will be mapped to the cluster ip port 3000
+# which will be used to communicate with the pods
+
 apiVersion: v1
 kind: Service
 metadata:
