@@ -1,0 +1,17 @@
+need to apply to create the dashboard pods
+
+need to create a admin which could be access resources
+
+and then get the tokens
+
+
+heapster... download the heapster zip and go into the deploy folder
+
+heapster support dashboard 1.10.1 ???
+need to change heapster deployment yaml file to use the dashbard newly created services account
+
+- --source=kubernetes:kubernetes:https://kubernetes.default?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250&insecure=true
+
+
+and then change deployment file
+kubectl edit deployment heapster -n kube-system
