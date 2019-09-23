@@ -15,3 +15,13 @@ need to change heapster deployment yaml file to use the dashbard newly created s
 
 and then change deployment file
 kubectl edit deployment heapster -n kube-system
+
+
+-- metrices...
+
+need to edit the deployment file and then... add under image:
+args:
+- --kubelet-insecure-tls
+- --kubelet-preferred-address-types=InternalIP
+
+
