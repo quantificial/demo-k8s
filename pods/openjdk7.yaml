@@ -10,9 +10,9 @@ spec:
     image: openjdk:7
     imagePullPolicy: IfNotPresent
     command: ["top","-b"]
-  dnsPolicy: "ClusterFirst"
-  dnsConfig:
-    nameservers:
-      - 8.8.8.8
-    searches:
+#  dnsPolicy: "ClusterFirst"
+#  dnsConfig:
+#    nameservers:
+#      - 8.8.8.8
+#    searches:
 

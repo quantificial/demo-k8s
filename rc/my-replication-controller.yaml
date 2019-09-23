@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: hello-pod-v1
+        app: hello-pod-v2
     spec:
       containers:
       - name: my-pod

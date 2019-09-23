@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-centos
+  name: openjdk8
   labels:
-    app: centos
+    app: openjkd8
 spec:
   containers:
-  - name: my-centos
-    image: centos:latest
+  - name: openjkd8
+    image: openjdk:8
     imagePullPolicy: IfNotPresent
     command: ["top","-b"]
 #  dnsPolicy: "ClusterFirst"
@@ -15,3 +15,4 @@ spec:
 #    nameservers:
 #      - 8.8.8.8
 #    searches:
+
