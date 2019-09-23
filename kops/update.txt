@@ -1,0 +1,12 @@
+Must specify --yes to apply changes
+
+Cluster configuration has been created.
+
+Suggestions:
+ * list clusters with: kops get cluster
+ * edit this cluster with: kops edit cluster k8sdemo.aws-demo.site
+ * edit your node instance group: kops edit ig --name=k8sdemo.aws-demo.site nodes
+ * edit your master instance group: kops edit ig --name=k8sdemo.aws-demo.site master-us-west-2a
+
+Finally configure your cluster with: kops update cluster k8sdemo.aws-demo.site --yes
+

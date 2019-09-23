@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  backend:
+    serviceName: other
+    servicePort: 8080
+  rules:
+  - host: hello.10.0.2.30.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: test
+          servicePort: 3000
+  - host: bar.10.0.2.30.nip.io
+    http:
+      paths:
+      - path: /bar/*
+        backend:
+          serviceName: my-deployment-service
+          servicePort: 8080

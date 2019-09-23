@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-deployment
+  template:
+    metadata:
+      labels:
+        app: my-deployment
+    spec:
+      containers:
+      - name: webapp
+        image: zxcvbnius/docker-demo:latest
+        ports:
+        - name: webapp-port
+          containerPort: 3000
+
+# kubectl expose deploy hello-deployment --type=NodeType --name=hello-deployment-service
+# get the node port and grant inbound traffic to 31822 of the master node
+# curl http://api.k8sdemo.aws-demo.site:31822/

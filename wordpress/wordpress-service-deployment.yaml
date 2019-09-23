@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: wordpress-port
   selector:
-    app: wordpress
+    app: wordpress-deployment
   type: NodePort

@@ -1,0 +1,18 @@
+curl -i -XPOST 'http://{influxdb_cluster_ip}:8086/query' --data-urlencode 'q=CREATE RETENTION POLICY "default" ON "k8s" DURATION INF REPLICATION 1 DEFAULT'
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json
+Request-Id: c19c946d-e3bb-11e6-8c84-000000000000
+X-Influxdb-Version: unknown
+Date: Thu, 26 Jan 2017 11:37:02 GMT
+Transfer-Encoding: chunked
+
+{"results":[{}]}
+
+
+# check database
+kubectl run --rm -it influxdbcli --image=influxdb -- influx -host monitoring-influxdb.kube-system.svc
+
+SELECT * FROM "k8s"."default"."cpu/usage_rate"  limit 10
+
+CREATE RETENTION POLICY "default" ON "k8s" DURATION INF REPLICATION 1 DEFAULT
