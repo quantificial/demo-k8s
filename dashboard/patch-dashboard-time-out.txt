@@ -1,0 +1,7 @@
+edit deployment
+ports:
+- containerPort: 8443
+  protocol: TCP
+args:
+  - --auto-generate-certificates
+  - --token-ttl=43200
