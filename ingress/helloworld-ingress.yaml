@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: helloworld.10.0.2.30.nip.io
+  - host: helloworld.192.168.1.60.nip.io
     http:
       paths:
       - backend:
