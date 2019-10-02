@@ -6,13 +6,13 @@ spec:
   rules:
     - host: blue.demo.com
       http:
-        paths:
+        paths: /?(.*)
           - backend:
               serviceName: blue-service
               servicePort: 80
     - host: purple.demo.com
       http:
-        paths:
+        paths: /?(.*)
           - backend:
               serviceName: purple-service
               servicePort: 80
