@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-busybox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nfs-busy-deploy
+  template:
+    metadata:
+      labels:
+        app: nfs-busy-deploy
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        volumeMounts:
+        - name: pv-storage
+          mountPath: /tmp/votest
+          subPath: votest
+        command:
+          - sleep
+          - "3600"
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+
+      volumes:
+      - name: pv-storage
+        persistentVolumeClaim:
+          claimName: pv-claim

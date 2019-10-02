@@ -11,4 +11,4 @@ spec:
       name: cache-volume
   volumes:
   - name: cache-volume
-    emptyDir: {}
+    emptyDir: {} # the volume will be removed when pod is removed

@@ -1,0 +1,21 @@
+## install in linux mint
+
+# server
+sudo apt install nfs-kernel-server
+
+# client
+sudo apt-get install nfs-common
+
+
+# install nfs tools in all master and nodes
+yum -y install nfs-utils
+
+edit /etc/exports file
+
+restart service 
+
+sudo systemctl restart nfs-kernel-server.service
+
+list nfs
+
+showmount -e
