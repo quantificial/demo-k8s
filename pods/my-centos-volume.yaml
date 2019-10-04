@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-centos-volume
+  labels:
+    app: centos
+spec:
+  containers:
+  - name: my-centos-volume
+    image: centos:latest
+    imagePullPolicy: IfNotPresent
+    command: ["top","-pb"]
+    volumeMounts:
+      - mountPath: /test
+        name: test-storageos
+  volumes:
+  - name: test-storageos
+    storageos:
+      volumeName: test
